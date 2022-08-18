@@ -21,6 +21,10 @@ section[class="top"]{
     align-items: center;
     justify-content: space-between;
 }
+.top nav h1{
+    color: lightgray;
+    display: none;
+}
 .top .nav-items{
     margin-left: 25%;
     width: 40%;
@@ -29,6 +33,7 @@ section[class="top"]{
     list-style: none;
     display: flex;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 .top li{
     color:lightgray ;
@@ -40,8 +45,7 @@ section[class="top"]{
     text-transform: uppercase;
 }
 .top .nav-button{
-    padding: 1% 0;
-    width: 13%;
+    padding: 1% 2%;
     background: transparent;
     border: 1px solid white;
     color: white;
@@ -58,6 +62,7 @@ section[class="top"]{
     margin-top: 5%;
     display: flex;
     align-items: center;
+    
 }
 .intro .right{
     padding-left:6%;
@@ -129,9 +134,12 @@ font-size: 30px;
     justify-content: space-evenly;
 }
 .projects h1{
+    text-align: center;
     font-size: 30px;
 }
 .projects p{
+        text-align: center;
+
     color: gray;
     margin-top: 10%;
 }
@@ -155,6 +163,7 @@ font-size: 30px;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    /* flex-wrap: wrap; */
 }
 .conatiner-content .text{
     width: 45%;
@@ -216,6 +225,7 @@ text-align: center;    font-size: 35px;
 .team-members{
     justify-content: space-between;
     display: flex;
+  
 }
 .team-members .card{
 
@@ -234,18 +244,19 @@ text-align: center;    font-size: 35px;
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 10%;
 }
-.footer .icon-div .social-media{
-        width: 30%;
 
-}
 .footer .icon-div ul{
     list-style: none;
     display: flex;
     justify-content: space-around;
+    /* flex-wrap: wrap; */
 }
 .icon-div ul li{
-    padding: 15px;
+    padding: 7%;
+    margin-right:5%;
     border-radius: 50%;
     background-color: #636C79;
 }
@@ -285,4 +296,80 @@ hr{
 .footer .details{
 margin-top: 7%;
 display: flex;
+}
+@media only screen and (max-width: 1000px){
+.top nav h1{
+    display: unset;
+    font-size: 1.5em;
+}
+.nav-items{
+    display: none;
+}
+.top nav{
+    position: relative;
+}
+.top .nav-button{
+    position: absolute;
+    right: 10%;
+}
+.top .logo img{
+    width: 50%;
+}
+.intro{
+    flex-wrap: wrap;
+}
+.intro h1{
+    font-size: 2em;
+}
+.projects h1{
+    font-size:1em ;
+}
+.vedio-section .heading h1,.team-work .heading h1{
+font-size: 1em;
+}
+.conatiner-content h1{
+    font-size: 1.4em;
+}
+.change-oder .image{
+    order: 1;
+}
+}
+@media only screen and (max-width: 600px) {
+.conatiner-content{
+    flex-wrap: wrap;
+}
+.conatiner-content .text{
+    width: auto;
+}
+.team-work p{
+    width: 80%;
+    margin: 3%;
+}
+.team-work button{
+margin: 3%;
+}
+.team-work .conatiner-content{
+    justify-content: end;
+
+}
+.creative-team .texts{
+    flex-direction: column;
+}
+.team-members{
+  flex-wrap: wrap;
+    justify-content: center;
+}
+.icon-div ul i{
+    font-size: 1.3em;
+    
+}
+}
+@media only screen and (max-width: 765px) {
+.footer .details{
+    flex-wrap: wrap;
+}
+.footer .details div{
+    width: auto;
+    margin: 3%;
+}
 }
